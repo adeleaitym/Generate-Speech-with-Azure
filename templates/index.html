@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Speech</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #191414; /* Dark background */
+            color: #FFFFFF; /* Text color */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #container {
+            text-align: center;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: #282828; /* Darker background */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        h1 {
+            color: #1DB954; /* Spotify's green color */
+            margin-bottom: 20px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #888888; /* Lighter text color */
+        }
+
+        input[type="text"],
+        textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #444444; /* Gray border */
+            background-color: #383838; /* Darker background */
+            color: #FFFFFF; /* Text color */
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        textarea:focus {
+            border-color: #1DB954; /* Spotify's green color */
+            outline: none;
+        }
+
+        button {
+            padding: 12px 24px;
+            background-color: #1DB954; /* Spotify's green color */
+            color: #FFFFFF; /* Text color */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #1ED760; /* Lighter green on hover */
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #1DB954; /* Spotify's green color */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .spotify-logo {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img class="spotify-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2048px-Spotify_logo_without_text.svg.png" alt="Spotify Logo">
+        <h1>Text to Speech</h1>
+        <form method="post">
+            <label for="text">Enter Text:</label><br>
+            <textarea id="text" name="text" rows="4" cols="50" placeholder="Enter your text here..."></textarea><br>
+            <label for="filename">Filename:</label><br>
+            <input type="text" id="filename" name="filename" placeholder="Enter filename"><br>
+            <button type="submit">Generate Audio</button>
+        </form>
+
+        <h2>Generated Audio Files:</h2>
+        <ul>
+            {% for file in files %}
+                <li><a href="{{ url_for('static', filename=file) }}">{{ file }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
