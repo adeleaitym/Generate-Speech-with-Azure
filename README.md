@@ -1,31 +1,27 @@
-# TEXT TO SPEECH WITH AZURE COGNITIVE SERVICES
+# Text to Speech with Azure Cognitive Skills
 
 ## Objective
-[Brief Objective - Remove this afterwards]
 
-The Detection Lab project aimed to establish a controlled environment for simulating and detecting cyber attacks. The primary focus was to ingest and analyze logs within a Security Information and Event Management (SIEM) system, generating test telemetry to mimic real-world attack scenarios. This hands-on experience was designed to deepen understanding of network security, attack patterns, and defensive strategies.
-
-### Skills Learned
-[Bullet Points - Remove this afterwards]
-
-- Advanced understanding of SIEM concepts and practical application.
-- Proficiency in analyzing and interpreting network logs.
-- Ability to generate and recognize attack signatures and patterns.
-- Enhanced knowledge of network protocols and security vulnerabilities.
-- Development of critical thinking and problem-solving skills in cybersecurity.
+The Flask Text to Speech (TTS) application aims to provide a simple web interface for users to convert text into speech using Microsoft's Text to Speech API. The primary goal is to create an intuitive user experience for generating audio files from entered text, facilitating tasks such as creating voiceovers or generating audio content from written text.
 
 ### Tools Used
-[Bullet Points - Remove this afterwards]
-
-- Security Information and Event Management (SIEM) system for log ingestion and analysis.
-- Network analysis tools (such as Wireshark) for capturing and examining network traffic.
-- Telemetry generation tools to create realistic network traffic and attack scenarios.
+Flask: A micro web framework for Python.
+Azure Cognitive Services: External API used for text-to-speech conversion.
+HTML, CSS, and JavaScript: Frontend technologies for designing and interacting with the web interface.
 
 ## Steps
-drag & drop screenshots here or use imgur and reference them using imgsrc
+Step 1: Home Page
 
-Every screenshot should have some text explaining what the screenshot is about.
+The home page displays a form where users can input text to be converted into speech.
 
-Example below.
+Step 2: Text Input
 
-*Ref 1: Network Diagram*
+Users can enter the text they want to convert into speech in the provided text area.
+
+Step 3: Audio Generation
+
+After submitting the text, the application processes it using the Microsoft Text to Speech API to generate an audio file.
+
+Step 4: Download Audio
+
+Once the audio file is generated, users can download it by clicking on the provided link.
