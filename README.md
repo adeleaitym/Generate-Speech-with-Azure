@@ -30,3 +30,9 @@ HTML, CSS, and JavaScript: Frontend technologies for designing and interacting w
 ### Step 4: Download Audio
 
 #### Once the audio file is generated, users can download it by clicking on the provided link.
+https://github.com/adeleaitym/Generate-Speech-with-Azure/assets/161321795/77464e6f-80f5-4104-ba33-98dc4a552e57
+
+
+
+
+
